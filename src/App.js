@@ -1,43 +1,23 @@
 import React from 'react';
-import useWebAnimations ,{flipInX, bounceIn, slideInDown, zoomInDown} from "@wellyshen/use-web-animations";
+import useWebAnimations ,{slideInDown} from "@wellyshen/use-web-animations";
 import './App.css';
-import g1 from './a1.gif';
-import g3 from './a3.gif';
-import g4 from './a4.gif';
+import p1 from './a3.png';
+import p2 from './a1.png';
+// import p3 from './a2.png';
+// import p4 from './a4.png';
+import p5 from './a5.png';
+import p6 from './a6.png'; 
+import logo from './logo.png';
 
 function App() {
-  const {keyframes, timing} = flipInX;
-  const text1 = useWebAnimations({
-    keyframes,
-    timing:{
-      ...timing,
-      delay: 200,
-      duration: timing.duration*3,
-      iterations:Infinity,
-    }
-  });
   const navAnim = useWebAnimations({...slideInDown});
-  const text2anim = useWebAnimations({...bounceIn,
-    timing:{
-      ...bounceIn.timing,
-      duration:4000,
-      iterations:Infinity,
-    }
-  });
-  const text3anim = useWebAnimations({...zoomInDown,
-    timing:{
-      ...zoomInDown.timing,
-      duration:3000,
-      iterations:Infinity,
-    }
-  });
   const img1 = useWebAnimations({
     keyframes:[
       {transform: 'scale(1)'},
-      {transform: 'scale(1.1)'}
+      {transform: 'scale(1.15)'}
     ],
     timing:{
-      duration:5000,
+      duration:3000,
       iterations:Infinity,
       direction:"alternate",
       easing: 'ease-in-out'
@@ -46,36 +26,69 @@ function App() {
 
   return (
     <div>
-      <div className='nav' ref={navAnim.ref}>
-        <div><b>Home</b></div>
-        <div><b>Our Services</b></div>
-        <div><b>About</b></div>
-        <div><b>Contact</b></div>
-      </div>
-      <div className='main'>
-        <div ref={text1.ref} style={{textAlign:"center", color:"blue"}}>
-          <h1>RIT Ready: Moving Forward Into Fall</h1>
-          <h2>Lets go there</h2>
-          <h2>It's built using WAAPI</h2>
-        </div>
-        <img src={g1} alt='illustration' ref={img1.ref} style={{minWidth:'300px', maxWidth:'40vw'}}/>
-      </div>
-      <div className='main'>
-        <img src={g3} alt='illustration' style={{minWidth:'300px', maxWidth:'50vw'}}/>
-        <div ref={text2anim.ref} style={{textAlign:"center", color:"red"}}>
-          <h1>The two most powerful warriors are</h1>
-          <h1> patience and time.</h1>
-          <h2>Leo Tolstoy</h2>
+      <div className='mainNav' ref={navAnim.ref}>
+        <a href='./'><img src={logo} alt='logo' style={{width:'130px'}}/></a>
+        <div className='nav'>
+          <div>Home</div>
+          <div>Our Services</div>
+          <div>About</div>
+          <div>Contact</div>
         </div>
       </div>
-      <div className='main'>
-        <div ref={text3anim.ref} style={{textAlign:"center", color:"red"}}>
-          <h1>An investment in knowledge pays the </h1>
-          <h1>best interest.</h1>
-          <h2>Benjamin Franklin</h2>
+
+      <div className='main text' style={{marginTop:60}}>
+      <img src={p1} alt='illustration' ref={img1.ref} style={{minWidth:'300px', maxWidth:'40vw'}}/>
+        <div style={{minWidth:'300px', maxWidth:'34vw'}}>
+          <h1>Innovative and intelligent
+          technology solutions
+          and services</h1>
+          <div style={{textAlign:"center"}}><button>Product Management</button></div>
         </div>
-        <img src={g4} alt='illustration' style={{minWidth:'300px', maxWidth:'50vw'}}/>
       </div>
+
+      <div className='section1 text'>
+        <div style={{textAlign:"center"}}>
+          <img src={p2} alt='illustration' style={{minWidth:'300px', maxWidth:'40vw'}}/>
+          <div style={{minWidth:'300px', maxWidth:'34vw'}}>
+            <h1>Customized solutions
+                to meet the needs of
+                the changing market</h1>
+            <div style={{textAlign:"center"}}><button>Revenue Cycle Management</button></div>
+          </div>
+        </div>
+        <div style={{textAlign:"center"}}>
+          <img src={p2} alt='illustration' style={{minWidth:'300px', maxWidth:'40vw'}}/>
+          <div style={{minWidth:'300px', maxWidth:'34vw'}}>
+            <h1>Customized solutions
+                to meet the needs of
+                the changing market</h1>
+            <div style={{textAlign:"center"}}><button>Revenue Cycle Management</button></div>
+          </div>
+        </div>
+      </div>
+       
+      <div className='section2 text'>
+        <div style={{minWidth:'300px', maxWidth:'34vw'}}>
+          <h1>Customized solutions
+              to meet the needs of
+              the changing market</h1>
+          <div style={{textAlign:"center"}}><button>Revenue Cycle Management</button></div>
+        </div>
+        <img src={p2} alt='illustration' style={{minWidth:'300px', maxWidth:'40vw'}}/>
+      </div>
+
+      <div className='section1 text'>
+        <div className='cols'>
+          <img src={p5} alt='illustration' style={{width:'100%'}}/>
+          <div style={{textAlign:"center"}}> test</div>
+        </div>
+        <div className='cols'>
+          <img src={p6} alt='illustration' style={{width:'100%'}}/>
+          <div style={{textAlign:"center"}}> test</div>
+        </div>
+      </div>
+
+
       <div className='footer'>
         <div>Website created by Abdurrahman Asad</div>
         <div><a href='https://github.com/A-ASAD'>Github</a></div>
