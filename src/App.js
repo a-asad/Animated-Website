@@ -80,7 +80,7 @@ function App() {
       </div>
 
       <div className='section1'>
-        <div style={{textAlign:"center"}} data-aos='flip-right'>
+        <div style={{textAlign:"center", margin:6}} data-aos='flip-right'>
           <img src={p2} ref={p2Anim.ref} alt='illustration' style={{minWidth:'300px', maxWidth:'40vw'}}/>
           <div style={{minWidth:'300px', maxWidth:'40vw', color:'#ed9600'}}>
             <h1>We're here to help you
@@ -88,7 +88,7 @@ function App() {
             <div style={{textAlign:"center"}}><button>Let's Make it Happen</button></div>
           </div>
         </div>
-        <div style={{textAlign:"center"}} data-aos='flip-left'>
+        <div style={{textAlign:"center", margin:6}} data-aos='flip-left'>
           <img src={p1} ref={p3Anim.ref} alt='illustration' style={{minWidth:'300px', maxWidth:'35vw'}}/>
           <div style={{minWidth:'300px', maxWidth:'40vw', color:'#ed9600'}}>
             <h1>Scalable extended
