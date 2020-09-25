@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
 import useWebAnimations ,{slideInDown, flipInX, bounceIn, tada} from "@wellyshen/use-web-animations";
 import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
+import 'aos/dist/aos.css'; 
 import './App.css';
-import p1 from './a3.png';
-import p2 from './a1.png';
-import p3 from './a2.png';
-import p4 from './a4.png';
-import p5 from './a5.png';
-import p6 from './a6.png'; 
+import p1 from './a3.webp';
+import p2 from './a1.webp';
+import p3 from './a2.webp';
+import p4 from './a4.webp';
+import p5 from './a5.webp';
+import p6 from './a6.webp'; 
 import logo from './logo.png';
 
 function App() {
