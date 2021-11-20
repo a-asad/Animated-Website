@@ -1,4 +1,4 @@
-# SHOE STORE
+# ANIMATED WEBSITE USING WAAPI
 A showcase of different animations using Web Animations API.
 
 ## TECH STACK
